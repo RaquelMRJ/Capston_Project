@@ -87,5 +87,6 @@ The pipeline does the following tasks:
 5. Load the data into Redshift tables.
 
 
-
+![pipeline](images/pipeline.png)
+> Structure of the Airflow DAG
 
