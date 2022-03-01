@@ -16,6 +16,14 @@ The table fact_movie_analytics takes information from:
 
 Use the Terraform template to accommodate the corresponding blocks in order to create the DW.
 
+● EKS cluster
+
+● S3 buckets
+
+● EMR cluster
+
+● Redshift cluster
+
 Terraform Modules and instructions are located in aws folder. 
 
 ### Load the data
@@ -25,8 +33,10 @@ Use the storage resources S3 created with Terraform.
 One bucket for Raw Layer and the other for Staging Layer.
 
 ● Upload movie_review.csv and log_reviews.csv files in Raw Layer.
+
 ● Upload python scripts files needed to process the data in Raw Layer.
 
 ● Upload packages.sh script in Raw Layer (Needed for Bootstrap actions in EMR)
 
 ### Process the data
+
