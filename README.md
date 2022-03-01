@@ -6,6 +6,8 @@ Assume that you work for a user behavior analytics company that collects user da
 
 The table fact_movie_analytics takes information from:
 
-● A PostgreSQL table named user_purchase. You will find here the file to fill this table.
-● Daily data by an external vendor in a CSV file named movie_review.csv that populates the classified_movie_review table. This file contains a customer id, review id and the message from the movie review. You will find the file here.
-● Daily data by an external vendor in a CSV file named log_reviews.csv. This file contains the id review and the metadata about the session when the movie review was done like log date, device (mobile, computer), OS (windows, linux), region, browser, IP, phone number. You will find the file here.
+● A PostgreSQL table named user_purchase. 
+
+● Daily data by an external vendor in a CSV file named movie_review.csv that populates the classified_movie_review table. This file contains a customer id, review id and the message from the movie review. 
+
+● Daily data by an external vendor in a CSV file named log_reviews.csv. This file contains the id review and the metadata about the session when the movie review was done like log date, device (mobile, computer), OS (windows, linux), region, browser, IP, phone number.
