@@ -90,3 +90,8 @@ The pipeline does the following tasks:
 ![pipeline](images/pipeline.png)
 > Structure of the Airflow DAG
 
+### How to run this project?
+
+##### Step 1: Create AWS infraestucture using Terraform modules (use aws folder in this repo)
+
+
