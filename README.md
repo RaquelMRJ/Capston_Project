@@ -103,4 +103,9 @@ terraform init
 terraform apply 
 ```
 
+##### Step 2: Start Apache Airflow
+
+Follow the instructions in aws folder or 
+
+Run `docker-compose up` from the directory containing `docker-compose.yml`. Ensure that you have mapped the volume to point to the location where you have your DAGs.
 
