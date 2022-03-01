@@ -26,6 +26,7 @@ One bucket for Raw Layer and the other for Staging Layer.
 
 ● Upload movie_review.csv and log_reviews.csv files in Raw Layer.
 ● Upload python scripts files needed to process the data in Raw Layer.
+
 ● Upload packages.sh script in Raw Layer (Needed for Bootstrap actions in EMR)
 
 ### Process the data
