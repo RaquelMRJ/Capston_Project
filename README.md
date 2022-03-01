@@ -1,4 +1,4 @@
-# Capston_Proyect
+# Capston Proyect
 
 ### Problem Description
 
