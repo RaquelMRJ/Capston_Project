@@ -109,3 +109,23 @@ Follow the instructions in aws folder or
 
 Run `docker-compose up` from the directory containing `docker-compose.yml`. Ensure that you have mapped the volume to point to the location where you have your DAGs.
 
+##### Step 3: Configure Apache Airflow Connections
+
+- S3 connection
+- Postgres connection
+- Redshift connection
+
+##### Step 4: Execute the dag_s3_to_postgres
+
+This dag will create the user_purchase table in Postgres using the csv file in S3.
+
+##### Step 5: Turn on and execute Capston_DW dag
+
+This Dag will transform, merge and upload the sources files from S3 buckets into Redshift tables to get the fact_movie_analytics and next you will find some of the many metrics that you can build from your data:
+
+- How many reviews were done in California, NY and Texas?
+- How many reviews were done in California, NY, and Texas with an apple device? And how many for each device type?
+- Which location has more reviews from a computer in a Chrome browser?
+- What are the states with more and fewer reviews in 2021?
+- Which device is the most used to write reviews in the east and which one in the west?
+
