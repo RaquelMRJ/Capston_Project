@@ -44,7 +44,32 @@ One bucket for Raw Layer and the other for Staging Layer.
 
 - Read movie_review.csv from Raw Layer and write the result in the Staging Layer following the logic listed below. (Movie review logic).
 - Read log_reviews.csv from Raw Layer and write the result in the Staging Layer following the logic listed below. (Log reviews logic).
-- Use the EMR cluster created with Terrafomr to build dim tables and calculate fact_movie_analytics (Fact movie analytics logic).
+- Use the EMR cluster created with Terrafomr to build dim tables and calculate fact_movie_analytics.
+
+#### Movie review logic:
+
+From the movie_review.csv file, work with the cid and review_str
+columns to get a list of words used by users.
+
+- Remove stop words if needed with pyspark.ml.feature.StopWordsRemover.
+- Look for data that contain the word “good”, consider the review as positive, and name it as positive_review.
+- Select the appropriate file format for the next steps.
+- Use the following logic to convert positive_review from a boolean to an integer:
+
+reviews.positive_review = CASE
+WHEN positive_review IS True THEN 1
+ELSE 0
+END
+
+
+- Save the data in the STAGE area. What you need is user_id, positive_review, review_id.
+
+### Log reviews logic:
+
+- From the log_reviews.csv file, map the structure for the DataFrame schema according to the log_review column that contains the xml as a string.
+- Work with the log column to get all the metadata and build the columns for your DataFrame.
+- Don’t forget to drop the log column by the end.
+- Store results into a new file in the STAGE area (log_id, log_date device, os, location, browser, ip, phone_number).
 
 
 
