@@ -94,4 +94,13 @@ The pipeline does the following tasks:
 
 ##### Step 1: Create AWS infraestucture using Terraform modules (use aws folder in this repo)
 
+Execute Terraform commands:
+
+```
+terraform init
+```
+```
+terraform apply 
+```
+
 
