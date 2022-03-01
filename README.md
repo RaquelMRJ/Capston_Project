@@ -76,6 +76,15 @@ END
 ![tables](images/tables.png)
 > Tables and their relationships
 
+### Data Pipeline design: 
+
+The pipeline does the following tasks:
+
+1. Extract data from multiple S3 locations.
+2. Transform the data using Movie review logic and Log reviews logic and pyspark in a EMR cluster.
+3. Transform the data into a star schema building the dimention and fact tables.
+4. Create all tables in Redshift cluster.
+5. Load the data into Redshift tables.
 
 
 
