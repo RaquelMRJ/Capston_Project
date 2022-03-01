@@ -73,8 +73,8 @@ END
 
 ### Data Structure:
 
-![dag](images/dag.png)
-> Structure of the Airflow DAG
+![tables](images/tables.png)
+> Tables and their relationships
 
 
 
