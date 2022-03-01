@@ -64,12 +64,18 @@ END
 
 - Save the data in the STAGE area. What you need is user_id, positive_review, review_id.
 
-##### Log reviews logic:
+#### Log reviews logic:
 
 - From the log_reviews.csv file, map the structure for the DataFrame schema according to the log_review column that contains the xml as a string.
 - Work with the log column to get all the metadata and build the columns for your DataFrame.
 - Don’t forget to drop the log column by the end.
 - Store results into a new file in the STAGE area (log_id, log_date device, os, location, browser, ip, phone_number).
+
+### Data Structure:
+
+
+
+
 
 
 
