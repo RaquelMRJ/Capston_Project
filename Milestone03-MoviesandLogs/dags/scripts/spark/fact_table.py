@@ -17,11 +17,6 @@ from pyspark.sql.functions import sum
 def fact_movie_table(input_user_purchase, input_log,input_movies, input_date, input_location, input_browser, input_device, input_os, output_fact):
      
 
-    #schema = StructType([\
-    #StructField("CustomerID", IntegerType(), True),\
-    #StructField("id_review", IntegerType(), True),\
-    #StructField("positive_review", StringType(), True)])
-
     # read input 
     log_reviews = spark.read.option("header", True).option("inferSchema", "true").csv(input_log)
     log_reviews = log_reviews.withColumn("browser", when(log_reviews.os == 'Microsoft Windows', "Internet Explorer")
@@ -32,7 +27,6 @@ def fact_movie_table(input_user_purchase, input_log,input_movies, input_date, in
                                  .otherwise('NULL'))
 
     movie_reviews = spark.read.option("header", True).option("inferSchema", "true").csv(input_movies)
-    #movie_reviews = spark.read.option("header", True).schema(schema).csv(input_movies)
     user_purchase = spark.read.option("header", True).option("inferSchema", "true").csv(input_user_purchase)
 
     #Read dim tables
@@ -112,11 +106,6 @@ def fact_movie_table(input_user_purchase, input_log,input_movies, input_date, in
 
 
 if __name__ == "__main__":
-    #parser = argparse.ArgumentParser()
-    #parser.add_argument("--input", type=str, help="HDFS input", default="/movie")
-    #parser.add_argument("--output", type=str, help="HDFS output", default="/output")
-    #args = parser.parse_args()
-    #spark = spark.sparkContext.setLogLevel("WARN")
     input_user_purchase = "s3://staging-raquel/user_purchase.csv"
     input_log = "s3://staging-raquel/clean_data/log_review/log_review.csv/"
     input_movies = "s3://staging-raquel/clean_data/movies_review/movies_review.csv/"
